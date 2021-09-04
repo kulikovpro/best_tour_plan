@@ -1,0 +1,122 @@
+/* Стили для навигации
+   ================== */
+.navbar
+   background-color: #fff
+   &-top
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+      padding-top: 40px
+      padding-bottom: 40px
+      &__menu-button
+         display: none
+   &__search
+      margin-right: auto
+      margin-left: 108px
+   &-bottom
+      background-color: $dark-color
+   &-menu
+      list-style-type: none
+      margin: 0
+      display: flex
+      align-items: center
+      justify-content: space-between
+      color: $light-color
+      padding: 31px 0
+      &__link
+         color: inherit
+         text-decoration: none
+         text-transform: uppercase
+         font-size: 14px
+         line-height: 18px
+         &:hover
+            color: $primary-color
+      &__item
+         &--mobile-visible
+            display: none
+
+/* Стили для логотипа
+   ================= */
+.logo
+   width: 177px
+
+/* Стили для блока поиска
+   =================== */
+.search
+   display: flex
+
+   position: relative
+
+   height: 40px
+
+   overflow: hidden
+
+   border-radius: 6px
+   &__input
+      width: 350px
+      height: 100%
+
+      padding-left: 23px
+      padding-right: 75px
+
+      background-color: #f5fafe
+
+      border: none
+
+      font-size: 12px
+      line-height: 15px
+      color: $text-color
+   &__button
+      position: absolute
+      overflow: hidden
+      top: 0
+      right: 0
+
+      width: 65px
+      height: 100%
+
+      border: none
+
+      background-color: $primary-color
+      cursor: pointer
+      &:hover::before
+         animation: ripple 1s ease
+      &::before
+         content: ""
+         position: absolute
+         top: 0
+         left: 0
+         width: 100%
+         height: 100%
+         background-color: rgba(255, 255, 255, 0.7)
+         border-radius: 50%
+         transform: scale(0)
+         @keyframes ripple
+            0%
+               transform: scale(0)
+               opacity: 1
+            100%
+               transform: scale(3)
+               opacity: 0
+
+/* Стили для аватарки
+   ================= */
+.user
+   display: flex
+   align-items: center
+
+   text-decoration: none
+   &__avatar
+      width: 40px
+      height: 40px
+
+      border-radius: 50%
+
+      object-fit: cover
+   &__name
+      font-size: 14px
+      line-height: 18px
+      color: $text-color
+
+      margin-left: 18px
